@@ -1,6 +1,7 @@
 # Swef - Smart Kitchen Assistant 🍳
 
-Welcome to **Swef**, your AI-powered smart kitchen assistant! Swef helps you decide what to cook based on the ingredients you have in your fridge. It considers your budget and suggests recipes accordingly. If you're missing any ingredients, it will list them for easy purchase. Say goodbye to decision fatigue and hello to seamless meal planning!
+Welcome to **Swef**, your AI-powered smart kitchen assistant! 
+Swef helps you decide what to cook based on the ingredients you have in your fridge. It considers your budget and suggests recipes accordingly. If you're missing any ingredients, it will list them for easy purchase. Say goodbye to decision fatigue and hello to seamless meal planning!
 
 ## Project Overview
 
@@ -12,6 +13,14 @@ Welcome to **Swef**, your AI-powered smart kitchen assistant! Swef helps you dec
 - Fetch fridge items from a mock JSON database.
 - Suggest recipes based on available ingredients and budget preferences.
 - List missing ingredients for easy shopping.
+
+## Future Enhancements
+
+This project could be an amazing feature to be added to quick commerce apps. Ideally, it should:
+- **Scan the fridge**: Automatically detect items available in the fridge.
+- **Ask about budget**: Inquire about the user's budget situation.
+- **Provide recipes**: Suggest recipes based on the available ingredients and budget.
+- **Auto-order extra ingredients**: After selecting a recipe, automatically order any extra ingredients needed, making it a smart feature for quick commerce projects.
 
 ## Getting Started
 
@@ -26,7 +35,7 @@ Welcome to **Swef**, your AI-powered smart kitchen assistant! Swef helps you dec
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Swef.git
+   git clone https://github.com/V3669/Swef---AI-Assistant-Chef.git
    cd Swef
    ```
 
