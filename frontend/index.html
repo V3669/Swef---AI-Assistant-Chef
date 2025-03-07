@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Swef - Smart Kitchen Assistant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #fridge-items {
+            margin-bottom: 20px;
+        }
+        #user-input {
+            margin-bottom: 20px;
+        }
+        input, select, button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Mock Swef</h1>
+    <div id="fridge-items"></div>
+    <div id="user-input">
+        <h2>Are you on a budget or ready to splurge?</h2>
+        <select id="budget">
+            <option value="splurge">Splurge</option>
+            <option value="budget">Budget-friendly</option>
+        </select>
+        <button id="get-recipes">Get Recipes</button>
+    </div>
+    <div id="recipes"></div>
+
+    <script>
+        // Mock data for fridge items
+        const fridgeItems = {
+            "eggs": 12,
+            "milk": 1,
+            "cheese": 2,
+            "tomatoes": 5,
+            "onions": 3
+        };
+
+        // Display fridge items
+        function displayFridgeItems() {
+            const fridgeDiv = document.getElementById('fridge-items');
+            fridgeDiv.innerHTML = '<h2>Items in Your Fridge:</h2>';
+            for (const [name, quantity] of Object.entries(fridgeItems)) {
+                fridgeDiv.innerHTML += `<p>${name}: ${quantity}</p>`;
+            }
+        }
+
+        // Get recipes based on user input
+        document.getElementById('get-recipes').addEventListener('click', () => {
+            const budget = document.getElementById('budget').value;
+            const ingredients = Object.keys(fridgeItems); // Get ingredient names
+
+            // Mock response for demonstration
+            const recipesResponse = {
+                recipes: [
+                    { title: "Scrambled Eggs", description: "A quick and easy recipe for scrambled eggs." },
+                    { title: "Cheese Omelette", description: "A delicious cheese omelette using fresh eggs." }
+                ]
+            };
+
+            displayRecipes(recipesResponse);
+        });
+
+        // Display recipes
+        function displayRecipes(data) {
+            const recipesDiv = document.getElementById('recipes');
+            recipesDiv.innerHTML = ''; // Clear previous results
+
+            const recipes = data.recipes || [];
+            recipes.forEach(recipe => {
+                const recipeElement = document.createElement('div');
+                recipeElement.innerHTML = `<h3>${recipe.title}</h3><p>${recipe.description}</p>`;
+                recipesDiv.appendChild(recipeElement);
+            });
+        }
+
+        // Call the function to display fridge items when the page loads
+        window.onload = displayFridgeItems;
+    </script>
+</body>
+</html>
